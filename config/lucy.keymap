@@ -34,6 +34,19 @@
     //retro-tap;
 };
 
+// corregge il problema nell'uso di enter quando premo velocemente il tasto
+// tuttavia ora mi sono reso conto che questo sta producendo alcuni errori quando premuto per fare lo spazio
+&lt {
+        compatible = "zmk,behavior-hold-tap";
+        label = "layer_toggle_with_hold_preferred";
+        #binding-cells = <2>;
+        flavor = "balanced";
+        tapping-term-ms = <200>;
+        //quick-tap-ms = <125>;
+        global-quick-tap;
+        bindings = <&mo>, <&kp>;
+};
+
 / {
 
 
